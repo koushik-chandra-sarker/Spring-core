@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!--    T-Shirt bean-->
+    <!-- <bean
+             class="com.springCore.four_lifeCycle.using_bean_initialize.T_Shirt"
+             name="t_shirt"
+             init-method="init"
+             destroy-method="destroy">
+         <property name="price" value="800"/>
+     </bean>-->
+
+
+    <!--    Coffee bean-->
+    <!--<bean class="com.springCore.four_lifeCycle.using_interfaces.Coffee" name="coffee">
+        <property name="price" value="85"/>
+    </bean>
+    -->
+
+
+<!--    annotation configuration-->
+    <context:annotation-config/> <!--all annotation-->
+<!--    or-->
+<!--    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />-->  <!--for @PostConstruct and @PreDestroy-->
+
+    <!--    potato bean-->
+    <bean class="com.springCore.four_lifeCycle.using_annotation.potato" name="potato">
+        <property name="price" value="20"/>
+    </bean>
+
+
+</beans>

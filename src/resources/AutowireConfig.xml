@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:contexe="http://www.springframework.org/schema/context"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- <bean name="address" class="com.springCore.five_AutoWire.usingBean.Address">
+         <property name="street" value="lake city"/>
+         <property name="city" value="Dhaka"/>
+     </bean>-->
+
+    <!--<bean name="address2" class="com.springCore.five_AutoWire.usingBean.Address">
+        <property name="street" value="lake city2"/>
+        <property name="city" value="Dhaka2"/>
+    </bean>
+-->
+    <!--    <bean name="employ" class="com.springCore.five_AutoWire.usingBean.Employ" autowire="byName"/>-->
+    <!--    <bean name="employ" class="com.springCore.five_AutoWire.usingBean.Employ" autowire="byType"/>-->
+    <!--    <bean name="employ" class="com.springCore.five_AutoWire.usingBean.Employ" autowire="constructor"/>-->
+
+
+    <!--    for Annotation-->
+    <context:annotation-config/>
+    <bean name="address-3" class="com.springCore.five_AutoWire.usingAnnotation.Address">
+        <property name="street" value="street3"/>
+        <property name="city" value="city3"/>
+    </bean>
+    <bean name="address-4" class="com.springCore.five_AutoWire.usingAnnotation.Address">
+        <property name="street" value="street4"/>
+        <property name="city" value="city4"/>
+    </bean>
+    <bean name="employ1" class="com.springCore.five_AutoWire.usingAnnotation.Employ"/>
+</beans>

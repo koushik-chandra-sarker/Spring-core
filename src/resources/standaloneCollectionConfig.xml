@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:contexe="http://www.springframework.org/schema/context"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd">
+
+<!--    Standalone list-->
+    <util:list list-class="java.util.LinkedList" id="bestFriends">
+        <value>abid</value>
+        <value>shahab</value>
+        <value>riad</value>
+        <value>shijan</value>
+    </util:list>
+
+<!--    Standalone Map-->
+    <util:map id="feeStructure" map-class="java.util.HashMap">
+        <entry key="java_course" value="8000"/>
+        <entry key="C_course" value="5000"/>
+        <entry key="Python_course" value="7000"/>
+    </util:map>
+
+<!--    Standalone Properties -->
+    <util:properties id="properties">
+        <prop key="driver">com.mysql.jdbc.Driver</prop>
+        <prop key="username">root</prop>
+        <prop key="password">0000</prop>
+        <prop key="url">mysql:jdbc://localhost:3037/database</prop>
+    </util:properties>
+
+    <bean name="parson1" class="com.springCore.six_StandaloneCollections.Parson">
+        <!--<property name="friends">
+            <ref bean="bestFriends"/>
+        </property>-->
+        <property name="friends" ref="bestFriends"/>
+        <property name="feeStructure" ref="feeStructure"/>
+        <property name="properties" ref="properties"/>
+    </bean>
+</beans>
